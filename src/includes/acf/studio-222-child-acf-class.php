@@ -1,6 +1,6 @@
 <?php
 
-class <torque_child_theme_class_prefix>_ACF {
+class S222_ACF {
 
   public function __construct() {
     add_action('admin_init', array( $this, 'acf_admin_init'), 99);

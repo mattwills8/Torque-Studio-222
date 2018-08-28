@@ -1,7 +1,7 @@
 {
-  "name": "<torque_child_theme_slug>",
+  "name": "studio-222-child",
   "version": "1.0.0",
-  "description": "Torque child theme for <torque_child_theme_client_name>",
+  "description": "Torque child theme for Studio 222",
   "author": "Torque",
   "license": "ISC",
   "scripts": {

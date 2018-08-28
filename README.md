@@ -9,17 +9,17 @@
 
 2.  Find and replace the following in the entire directory: **Note:** do not use numbers or special characters
 
-    1.  <torque_child_theme_name> (eg 905 Fulton)
-    2.  <torque_child_theme_slug> (eg 905-fulton-child) **Note:** best practise is to include -child at the end
-    3.  <torque_child_theme_class_prefix> (eg Fulton)
-    4.  <torque_child_theme_uri> (eg https://github.com/vallgroup/Torque-Theme)
-    5.  <torque_child_theme_client_name> (eg Fulton)
+    1.  Studio 222 (eg 905 Fulton)
+    2.  studio-222-child (eg 905-fulton-child) **Note:** best practise is to include -child at the end
+    3.  S222 (eg Fulton)
+    4.  https://github.com/mattwills8/Torque-Studio-222 (eg https://github.com/vallgroup/Torque-Theme)
+    5.  Studio 222 (eg Fulton)
 
-3.  Rename directory: torque-child-theme => <torque_child_theme_slug>
+3.  Rename directory: torque-child-theme => studio-222-child
 
-4.  Rename all files in this directory: {torque-child_theme}-etc-class.php => {<torque_child_theme_slug>}-etc-class.php
+4.  Rename all files in this directory: {torque-child_theme}-etc-class.php => {studio-222-child}-etc-class.php
 
-5.  Add '<torque_child_theme_slug>' to cli/lib/workspaces.sh
+5.  Add 'studio-222-child' to cli/lib/workspaces.sh
 
 6.  Open new terminal, and in **project** root, run:
 
@@ -32,7 +32,7 @@
 7.  In **project** root, run:
 
     ```sh
-    $ yarn start <torque_child_theme_slug>
+    $ yarn start studio-222-child
     ```
 
     to compile files to wp-content and start webpack
