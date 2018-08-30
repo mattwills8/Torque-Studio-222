@@ -1,26 +1,155 @@
 @import "fonts";
 
 body {
+  font-family: $Montserrat;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.29;
+  color: $medium-blue;
 
+  @include respond-to(tablet) {
+    font-size: 16px;
+    line-height: 1.38;
+  }
+
+  &.body-large {
+    font-size: 18px;
+    line-height: 1.22;
+
+    @include respond-to(tablet) {
+      font-size: 22px;
+      font-weight: 500;
+      line-height: 1.41;
+    }
+  }
+
+  &.body-white {
+    font-family: $Jost;
+    font-size: 16px;
+    font-weight: normal;
+    line-height: 1.13;
+    color: $white;
+
+    @include respond-to(tablet) {
+      font-size: 22px;
+      line-height: 1.27;
+      letter-spacing: 1px;
+    }
+  }
 }
 
 h1 {
+  font-family: $Jost;
+  font-size: 36px;
+  font-weight: 500;
+  line-height: 1.06;
+  letter-spacing: 0.5px;
+  color: $light-blue;
 
+  @include respond-to(tablet) {
+    font-size: 76px;
+    line-height: 1.05;
+    letter-spacing: 1px;
+  }
 }
 
 h2 {
+  font-family: $Jost;
+  font-size: 28px;
+  font-weight: 500;
+  line-height: 1.21;
+  letter-spacing: 1.4px;
+  color: $medium-blue;
 
+  @include respond-to(tablet) {
+    font-size: 40px;
+    line-height: 1.1;
+    letter-spacing: 2px;
+  }
 }
 
 h3 {
+  font-family: $Jost;
+  font-size: 22px;
+  font-weight: 500;
+  line-height: 1.09;
+  letter-spacing: 0.6px;
+  color: $orange;
 
-}
-
-h4 {
-
+  @include respond-to(tablet) {
+    font-size: 34px;
+    line-height: 1.12;
+    letter-spacing: 1px;
+  }
 }
 
 a {
   cursor: pointer;
   text-decoration: none;
+}
+
+.nav-menu-link {
+  font-family: $Jost;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 1.11;
+  letter-spacing: 2px;
+  color: $light-blue;
+
+  @include respond-to(tablet) {
+    font-size: 32px;
+    line-height: 0.63;
+    letter-spacing: 3.6px;
+  }
+
+  &.active {
+    color: $orange;
+  }
+}
+
+.nav-bar-link {
+   font-family: $Jost;
+   font-size: 16px;
+   font-weight: 500;
+   line-height: 1.25;
+   letter-spacing: 2px;
+   color: $light-blue;
+
+   &:hover {
+     color: $white;
+   }
+
+   &.active {
+     letter-spacing: 2.4px;
+     text-decoration: underline;
+     color: $orange;
+   }
+}
+
+form {
+  label {
+    font-family: $Jost;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 1.29;
+    letter-spacing: 1px;
+    text-align: right;
+    color: $royal-blue;
+
+    @include respond-to(tablet) {
+      font-size: 16px;
+      font-weight: 500;
+      line-height: 1.25;
+      letter-spacing: 2px;
+    }
+  }
+}
+
+.footer-copy-tablet {
+  @include respond-to(tablet) {
+    font-family: $Jost;
+    font-size: 16px;
+    line-height: 1.25;
+    color: $white;
+  }
 }
