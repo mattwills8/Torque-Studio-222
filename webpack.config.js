@@ -16,7 +16,7 @@ const config = {
 
   output: {
     path: path.join(buildDir, './bundles'),
-    publicPath: '/',
+    publicPath: '',
     filename: 'bundle.js',
   },
 
