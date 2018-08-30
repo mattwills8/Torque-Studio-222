@@ -1,0 +1,30 @@
+button {
+  border: none;
+  padding: 0;
+  font-family: $Montserrat;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.29;
+  letter-spacing: 0.7px;
+  color: $light-blue;
+  outline-color: $light-blue;
+
+  @include respond-to(tablet) {
+    font-size: 16px;
+    line-height: 1.38;
+    letter-spacing: 0.8px;
+  }
+
+  &.filter-button {
+    border: 1px solid $royal-blue;
+    padding: 10px 10px;
+    line-height: 1;
+    text-transform: uppercase;
+    color: $royal-blue;
+
+    &.active {
+      border-color: $orange;
+      color: $orange;
+    }
+  }
+}
