@@ -1,7 +1,21 @@
 footer#footer {
-  padding: 30px $mainPaddingSidesSecondary;
   background-color: $dark-blue;
-  box-sizing: border-box;
+
+  .footer-content-wrapper {
+    margin: 0 auto;
+    padding: 30px $mainPaddingSidesSecondary;
+    width: 100%;
+    max-width: $mainMaxWidth + $mainPaddingSidesDesktop * 2;
+    box-sizing: border-box;
+
+    @include respond-to(tablet) {
+      padding: 40px $mainPaddingSidesTablet 50px;
+    }
+
+    @include respond-to(desktop) {
+      padding: 45px $mainPaddingSidesDesktop 70px;
+    }
+  }
 
   .hide-tablet {
     @include respond-to(tablet) {
@@ -30,6 +44,24 @@ footer#footer {
       clear: unset;
       padding-bottom: 25px;
 
+      @include respond-to(tablet) {
+        padding-bottom: 0;
+        padding-right: 40px;
+
+        // for the footer column 3 that comes into this column on tablet
+        .sidebar-footer-col:first-child {
+          padding-bottom: 30px;
+        }
+      }
+
+      @include respond-to(desktop) {
+        padding-right: 80px;
+
+        .sidebar-footer-col:first-child {
+          padding-bottom: 0px;
+        }
+      }
+
       img {
         max-width: 100%;
         object-fit: contain;
@@ -37,7 +69,7 @@ footer#footer {
 
       p {
         margin-top: 0px;
-        margin-bottom: 2px;
+        margin-bottom: 3px;
       }
 
       button {
