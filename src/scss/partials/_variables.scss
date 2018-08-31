@@ -11,3 +11,21 @@ $smoke: #f1f1f1;
 // breakpoints
 $MobileMaxWidth: 768px;
 $TabletMaxWidth: 1024px;
+
+// layout
+$mainPaddingTop: 15px;
+$mainPaddingBottom: 30px;
+$mainPaddingSides: 10px;
+$mainPadding: $mainPaddingTop $mainPaddingSides $mainPaddingBottom $mainPaddingSides;
+
+$mainPaddingTopTablet: 35px;
+$mainPaddingBottomTablet: 40px;
+$mainPaddingSidesTablet: 75px;
+$mainPaddingTablet: $mainPaddingTopTablet $mainPaddingSidesTablet $mainPaddingBottomTablet $mainPaddingSidesTablet;
+
+$mainPaddingTopDesktop: 60px;
+$mainPaddingBottomDesktop: 70px;
+$mainPaddingSidesDesktop: 135px;
+$mainPaddingDesktop: $mainPaddingTopDesktop $mainPaddingSidesDesktop $mainPaddingBottomDesktop $mainPaddingSidesDesktop;
+
+$mainMaxWidth: 1170px;

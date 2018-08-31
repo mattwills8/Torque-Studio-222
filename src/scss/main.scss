@@ -5,3 +5,19 @@
 @import "typography/typography";
 
 @import "elements";
+
+
+main {
+  padding: $mainPadding;
+  width: 100%;
+  max-width: $mainMaxWidth;
+  box-sizing: border-box;
+
+  @include respond-to(tablet) {
+    padding: $mainPaddingTablet;
+  }
+
+  @include respond-to(desktop){
+    padding: $mainPaddingDesktop;
+  }
+}
