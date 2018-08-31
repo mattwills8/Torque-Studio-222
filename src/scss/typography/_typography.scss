@@ -11,30 +11,30 @@ body {
     font-size: 16px;
     line-height: 1.38;
   }
+}
 
-  &.body-large {
-    font-size: 18px;
-    line-height: 1.22;
+.body-large {
+  font-size: 18px;
+  line-height: 1.22;
 
-    @include respond-to(tablet) {
-      font-size: 22px;
-      font-weight: 500;
-      line-height: 1.41;
-    }
+  @include respond-to(tablet) {
+    font-size: 22px;
+    font-weight: 500;
+    line-height: 1.41;
   }
+}
 
-  &.body-white {
-    font-family: $Jost;
-    font-size: 16px;
-    font-weight: normal;
-    line-height: 1.13;
-    color: $white;
+.body-white {
+  font-family: $Jost;
+  font-size: 16px;
+  font-weight: normal;
+  line-height: 1.13;
+  color: $white;
 
-    @include respond-to(tablet) {
-      font-size: 22px;
-      line-height: 1.27;
-      letter-spacing: 1px;
-    }
+  @include respond-to(tablet) {
+    font-size: 22px;
+    line-height: 1.27;
+    letter-spacing: 1px;
   }
 }
 

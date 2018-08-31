@@ -9,6 +9,7 @@ class S222_Widgets {
   }
 
   public function modify_parent_sidebars( $sidebars ) {
+    unset($sidebars['primary']);
     return $sidebars;
   }
 }

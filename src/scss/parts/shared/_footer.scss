@@ -1,0 +1,48 @@
+footer#footer {
+  padding: 30px $mainPaddingSidesSecondary;
+  background-color: $dark-blue;
+  box-sizing: border-box;
+
+  .hide-tablet {
+    @include respond-to(tablet) {
+      display: none;
+    }
+
+    @include respond-to(desktop) {
+      display: block;
+    }
+  }
+
+  .show-tablet {
+    display: none;
+
+    @include respond-to(tablet) {
+      display: block;
+    }
+
+    @include respond-to(desktop) {
+      display: none;
+    }
+  }
+
+  .footer-content-wrapper {
+    .s222-footer-col {
+      clear: unset;
+      padding-bottom: 25px;
+
+      img {
+        max-width: 100%;
+        object-fit: contain;
+      }
+
+      p {
+        margin-top: 0px;
+        margin-bottom: 2px;
+      }
+
+      button {
+        margin: 10px 0;
+      }
+    }
+  }
+}

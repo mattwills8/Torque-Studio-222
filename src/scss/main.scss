@@ -6,13 +6,15 @@
 
 @import "elements";
 
+@import "parts/shared/footer";
 @import "parts/shared/header-templates/header-style-1";
 
 
 main {
+  margin: 0 auto;
   padding: $mainPadding;
   width: 100%;
-  max-width: $mainMaxWidth;
+  max-width: $mainMaxWidth + $mainPaddingSidesDesktop * 2;
   box-sizing: border-box;
 
   @include respond-to(tablet) {
