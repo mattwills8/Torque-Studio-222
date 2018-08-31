@@ -1,7 +1,14 @@
 <?php
 
-$tq_header_style_1_color = '';
+// needs to be in loop
 
-include( locate_template( '/parts/shared/header-templates/header-style-1.php' , false, false ) );
+$header_style = get_field('header_style');
+
+if ( $header_style && $header_style === 'style_2' ) {
+  get_template_part( 'parts/shared/header', 'blue' );
+
+} else {
+  get_template_part( 'parts/shared/header', 'transparent' );
+}
 
 ?>
