@@ -1,0 +1,44 @@
+$headerHeight: 56px;
+
+header#header-style-1 {
+  height: $headerHeight;
+
+  .torque-header-content-wrapper {
+    position: relative;
+    z-index: 100;
+    padding: 10px $mainPaddingSides;
+    max-width: $mainMaxWidth;
+
+    .torque-header-burger-menu-wrapper {
+      @include respond-to(desktop) {
+        display: none;
+      }
+
+      .torque-burger-menu-line {
+        background-color: $white;
+      }
+    }
+
+    .torque-header-menu-items-inline-wrapper {
+      @include respond-to-max(desktop) {
+        display: none;
+      }
+    }
+  }
+
+  .torque-header-menu-items-mobile,
+  .torque-header-menu-items-mobile.active {
+    z-index: 50;
+    padding: $headerHeight $mainPaddingSides 15px $mainPaddingSides;
+    background-color: $royal-blue;
+
+    @include respond-to(desktop) {
+      display: none;
+    }
+
+    .torque-menu-item {
+      padding: 15px 0px;
+      @extend %nav-menu-link;
+    }
+  }
+}
