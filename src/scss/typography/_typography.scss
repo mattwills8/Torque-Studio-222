@@ -107,12 +107,13 @@ a {
   }
 }
 
-.nav-bar-link {
+%nav-bar-link {
    font-family: $Jost;
    font-size: 16px;
    font-weight: 500;
    line-height: 1.25;
    letter-spacing: 2px;
+   text-transform: uppercase;
    color: $light-blue;
 
    &:hover {

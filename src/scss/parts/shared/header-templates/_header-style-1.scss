@@ -1,5 +1,6 @@
 $headerHeight: 56px;
 $headerHeightTablet: 70px;
+$headerHeightDesktop: 100px;
 
 header#header-style-1 {
   height: $headerHeight;
@@ -8,11 +9,21 @@ header#header-style-1 {
     height: $headerHeightTablet;
   }
 
+  @include respond-to(desktop) {
+    height: $headerHeightDesktop;
+  }
+
   .torque-header-content-wrapper {
     position: relative;
     z-index: 100;
+    margin: 0 auto;
     padding: 10px $mainPaddingSides;
-    max-width: $mainMaxWidth;
+    width: 100%;
+    max-width: $mainMaxWidth + $mainPaddingSidesDesktop * 2;
+
+    @include respond-to(desktop) {
+      padding: 20px $mainPaddingSidesDesktop;
+    }
 
     .torque-header-logo-wrapper {
       div {
@@ -31,6 +42,27 @@ header#header-style-1 {
     }
 
     .torque-header-menu-items-inline-wrapper {
+      position: relative;
+      height: 100%;
+
+      .torque-menu-items-inline {
+        // all this keeps our inline menu items
+        // in between the logo and side of the header area
+        // while leaving a 10% padding to the left
+        display: inline-block;
+        position: absolute;
+        right: 45%;
+        top: 50%;
+        transform: translate(50%, -50%);
+        width: 90%;
+        text-align: center;
+
+        .torque-menu-item {
+          @extend %nav-bar-link;
+          padding: 0 17px;
+        }
+      }
+
       @include respond-to-max(desktop) {
         display: none;
       }
