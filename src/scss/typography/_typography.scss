@@ -98,7 +98,7 @@ a {
 
   @include respond-to(tablet) {
     font-size: 32px;
-    line-height: 0.63;
+    line-height: 1;
     letter-spacing: 3.6px;
   }
 

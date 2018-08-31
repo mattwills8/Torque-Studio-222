@@ -1,13 +1,24 @@
 $headerHeight: 56px;
+$headerHeightTablet: 70px;
 
 header#header-style-1 {
   height: $headerHeight;
+
+  @include respond-to(tablet) {
+    height: $headerHeightTablet;
+  }
 
   .torque-header-content-wrapper {
     position: relative;
     z-index: 100;
     padding: 10px $mainPaddingSides;
     max-width: $mainMaxWidth;
+
+    .torque-header-logo-wrapper {
+      div {
+        width: 100%;
+      }
+    }
 
     .torque-header-burger-menu-wrapper {
       @include respond-to(desktop) {
@@ -32,13 +43,21 @@ header#header-style-1 {
     padding: $headerHeight $mainPaddingSides 15px $mainPaddingSides;
     background-color: $royal-blue;
 
+    @include respond-to(tablet) {
+      padding-bottom: 20px;
+    }
+
     @include respond-to(desktop) {
       display: none;
     }
 
     .torque-menu-item {
-      padding: 15px 0px;
       @extend %nav-menu-link;
+      padding: 15px 0px;
+
+      @include respond-to(tablet) {
+        padding: 20px 0px;
+      }
     }
   }
 }
