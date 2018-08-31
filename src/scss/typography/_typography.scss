@@ -39,17 +39,36 @@ body {
 }
 
 h1 {
+  position: relative;
+  padding-bottom: 20px; // for underline
   font-family: $Jost;
   font-size: 36px;
   font-weight: 500;
   line-height: 1.06;
   letter-spacing: 0.5px;
+  text-transform: uppercase;
   color: $light-blue;
 
   @include respond-to(tablet) {
+    padding-bottom: 53px; // for underline
     font-size: 76px;
     line-height: 1.05;
     letter-spacing: 1px;
+  }
+
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 93px;
+    height: 2px;
+    background-color: $orange;
+
+    @include respond-to(tablet) {
+      width: 173px;
+      height: 3px;
+    }
   }
 }
 
