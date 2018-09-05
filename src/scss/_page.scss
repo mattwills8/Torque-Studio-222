@@ -1,0 +1,16 @@
+article.page {
+  .page-content {
+    p {
+      @include respond-to(desktop) {
+        float: left;
+        width: 50%;
+        padding-right: 25px;
+        box-sizing: border-box;
+
+        &:nth-child(odd) {
+          clear: both;
+        }
+      }
+    }
+  }
+}
