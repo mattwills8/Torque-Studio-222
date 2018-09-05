@@ -79,21 +79,6 @@ class S222_ACF {
       			'rows' => 3,
       		),
       		array(
-      			'key' => 'field_5b8fc58e41572',
-      			'label' => 'CTA Text',
-      			'name' => 'footer_cta_text',
-      			'type' => 'text',
-      			'conditional_logic' => array(
-      				array(
-      					array(
-      						'field' => 'field_5b8fc52a41570',
-      						'operator' => '==',
-      						'value' => '1',
-      					),
-      				),
-      			),
-      		),
-      		array(
       			'key' => 'field_5b8fc5a041573',
       			'label' => 'CTA Link',
       			'name' => 'footer_cta_link',
@@ -107,7 +92,7 @@ class S222_ACF {
       					),
       				),
       			),
-      			'return_format' => 'url',
+      			'return_format' => 'array',
       		),
           array(
       			'key' => 'field_5b8fdf7d91000',
@@ -148,21 +133,6 @@ class S222_ACF {
       			'new_lines' => 'wpautop',
       		),
       		array(
-      			'key' => 'field_5b8fe03f91003',
-      			'label' => 'Secondary CTA Text',
-      			'name' => 'secondary_footer_cta_text',
-      			'type' => 'text',
-      			'conditional_logic' => array(
-      				array(
-      					array(
-      						'field' => 'field_5b8fdf7d91000',
-      						'operator' => '==',
-      						'value' => '1',
-      					),
-      				),
-      			),
-      		),
-      		array(
       			'key' => 'field_5b8fe06091004',
       			'label' => 'Secondary CTA Link',
       			'name' => 'secondary_footer_cta_link',
@@ -176,7 +146,7 @@ class S222_ACF {
       					),
       				),
       			),
-      			'return_format' => 'url',
+      			'return_format' => 'array',
       		),
       	),
       	'location' => array(

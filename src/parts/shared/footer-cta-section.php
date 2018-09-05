@@ -3,7 +3,6 @@
 $image = get_field('footer_image');
 $title = get_field('footer_title');
 $content = get_field('footer_content');
-$cta_text = get_field('footer_cta_text');
 $cta_link = get_field('footer_cta_link');
 
 ?>
@@ -25,9 +24,9 @@ $cta_link = get_field('footer_cta_link');
       <div class="footer-cta-content"><?php echo $content; ?></div>
     <?php } ?>
 
-    <?php if ($cta_text && $cta_link) { ?>
-      <a href="<?php echo $cta_link; ?>">
-        <button><?php echo $cta_text; ?></button>
+    <?php if ($cta_link) { ?>
+      <a href="<?php echo $cta_link['url']; ?>" target="<?php echo $cta_link['target']; ?>">
+        <button><?php echo $cta_link['title']; ?></button>
       </a>
     <?php } ?>
 
