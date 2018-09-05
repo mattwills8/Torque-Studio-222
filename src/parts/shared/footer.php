@@ -1,5 +1,9 @@
 <?php
 
+if (get_field('secondary_footer_cta')) {
+  get_template_part( 'parts/shared/footer', 'cta-section-secondary' );
+}
+
 if (get_field('footer_cta')) {
   get_template_part( 'parts/shared/footer', 'cta-section' );
 }

@@ -1,0 +1,26 @@
+#footer-cta-section-secondary {
+  margin: 0 auto;
+  padding: 35px $mainPaddingSides 25px;
+  max-width: 780px;
+  text-align: center;
+
+  @include respond-to(tablet) {
+    padding: 70px $mainPaddingSidesTablet 45px;
+  }
+
+  @include respond-to(desktop) {
+    padding: 110px $mainPaddingSidesDesktop 80px;
+  }
+
+  h2 {
+    margin-top: 0;
+  }
+
+  p {
+    margin-bottom: 15px;
+
+    @include respond-to(tablet) {
+      margin-bottom: 30px;
+    }
+  }
+}
