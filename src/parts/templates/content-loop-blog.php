@@ -1,8 +1,8 @@
 <?php
 
 $query = new WP_Query( array(
-    'category__and'       => array(3,7),
-    'posts_per_page'  => -1
+    'cat'       => 9,
+    'paged'     => get_query_var( 'paged' ) ? get_query_var( 'paged' ) : 1,
 ));
 
 if ( $query->have_posts() ) {
@@ -17,7 +17,7 @@ if ( $query->have_posts() ) {
     $s222_loop_post_content = get_the_excerpt();
     $s222_loop_post_cta_link = array(
       'url'       => get_the_permalink(),
-      'title'     => 'Learn More',
+      'title'     => 'Read More',
       'target'    => '_blank'
     );
 
@@ -26,6 +26,14 @@ if ( $query->have_posts() ) {
 
   ?></div><?php
 
+  $temp_query = $wp_query;
+  $wp_query   = NULL;
+  $wp_query   = $query;
+
+  get_template_part( 'parts/elements/pagination/pagination', 'buttons' );
+
+  $wp_query = NULL;
+  $wp_query = $temp_query;
 }
 
 

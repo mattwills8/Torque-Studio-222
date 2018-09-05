@@ -28,6 +28,10 @@ if ( class_exists( 'S222_Widgets' ) ) {
    new S222_ACF();
  }
 
+ add_filter('excerpt_more', function() {
+   return '...';
+ });
+
 
 /**
  * Staff plugin config

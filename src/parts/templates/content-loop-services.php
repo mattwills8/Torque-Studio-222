@@ -1,10 +1,14 @@
 <?php
 
 $query = new WP_Query( array(
-    'cat'       => '8'
+    'cat'       => 8,
+    'paged'     => get_query_var( 'paged' ) ? get_query_var( 'paged' ) : 1,
 ));
 
 if ( $query->have_posts() ) {
+
+  ?><div class="row"><?php
+
   while ( $query->have_posts() ) {
     $query->the_post();
 
@@ -14,6 +18,17 @@ if ( $query->have_posts() ) {
 
     include locate_template( 'parts/templates/loop-post.php', false, false );
   }
+
+  ?></div><?php
+
+  $temp_query = $wp_query;
+  $wp_query   = NULL;
+  $wp_query   = $query;
+
+  get_template_part( 'parts/elements/pagination/pagination', 'buttons' );
+
+  $wp_query = NULL;
+  $wp_query = $temp_query;
 }
 
 

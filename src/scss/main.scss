@@ -5,6 +5,7 @@
 @import "typography/typography";
 
 @import "elements";
+@import "elements/pagination";
 
 @import "page";
 
@@ -31,5 +32,9 @@ main {
 
   @include respond-to(desktop) {
     padding: $mainPaddingDesktop;
+  }
+
+  &.no-padding-bottom {
+    padding-bottom: 0;
   }
 }

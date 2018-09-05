@@ -2,6 +2,7 @@
 
 $query = new WP_Query( array(
     'post_type'       => 'torque_staff'
+    'posts_per_page'  => -1
 ));
 
 if ( $query->have_posts() ) {

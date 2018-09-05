@@ -1,6 +1,6 @@
 <?php
 /**
- * Template Name: Services
+ * Template Name: Blog
  *
  * @package torque
  */
@@ -15,9 +15,9 @@ if ( have_posts() ) while ( have_posts() ) : the_post();
 
 ?>
 
-  <main class="no-padding-bottom">
+  <main>
 
-      <?php get_template_part( 'parts/templates/content-loop', 'services' ); ?>
+      <?php get_template_part( 'parts/templates/content-loop', 'blog' ); ?>
 
   </main>
 
