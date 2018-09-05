@@ -1,0 +1,28 @@
+.torque-gallery-layout {
+  @include respond-to(tablet) {
+    margin-left: -($mainPaddingSidesTablet - 10px);
+    margin-right: -($mainPaddingSidesTablet - 10px);
+  }
+
+  @include respond-to(desktop) {
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .torque-gallery-column {
+    @include respond-to-max(desktop) {
+      padding: 0 !important;
+      width: 100% !important;
+    }
+
+    height: 200px;
+
+    @include respond-to(tablet) {
+      height: 415px;
+    }
+
+    @include respond-to(desktop) {
+      height: 350px;
+    }
+  }
+}
