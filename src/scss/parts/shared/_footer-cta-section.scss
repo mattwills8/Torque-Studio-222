@@ -1,0 +1,66 @@
+#footer-cta-section {
+  position: relative;
+  padding: 0px $mainPaddingSides $mainPaddingBottom;
+
+  @include respond-to(tablet) {
+    padding: 0;
+  }
+
+  .footer-cta-section-image {
+    @include respond-to(desktop) {
+      display: none;
+    }
+  }
+
+  .footer-cta-section-image-desktop {
+    @include respond-to-max(desktop) {
+      display: none;
+    }
+
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    width: 63%;
+    background-size: cover;
+  }
+
+  .footer-cta-content-wrapper {
+    padding: 0px 25px 20px;
+    background-color: $smoke;
+
+    @include respond-to(tablet) {
+      padding: 0px $mainPaddingSidesTablet $mainPaddingBottomTablet;
+    }
+
+    @include respond-to(desktop) {
+      padding: 50px 70% ($mainPaddingBottomDesktop + 10px)
+        $mainPaddingSidesDesktop;
+    }
+
+    h3 {
+      text-transform: uppercase;
+
+      @include respond-to(desktop) {
+        margin-bottom: 60px;
+      }
+    }
+
+    .footer-cta-content {
+      max-width: 420px;
+    }
+
+    button {
+      margin-top: 10px;
+      text-transform: uppercase;
+
+      @include respond-to(tablet) {
+        margin-top: 40px;
+      }
+
+      @include respond-to(desktop) {
+        margin-top: 80px;
+      }
+    }
+  }
+}

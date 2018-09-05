@@ -1,3 +1,12 @@
+<?php
+
+if (get_field('footer_cta')) {
+  get_template_part( 'parts/shared/footer', 'cta-section' );
+}
+
+?>
+
+
 <footer id="footer">
 
   <div class="row footer-content-wrapper" >

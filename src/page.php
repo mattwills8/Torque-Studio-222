@@ -22,8 +22,11 @@ if ( have_posts() ) while ( have_posts() ) : the_post();
   </main>
 
 <?php
+
+  get_template_part(  'parts/shared/footer' );
+
 endwhile;
 
-TQ::get_template_parts( array( 'parts/shared/footer','parts/shared/html-footer' ) );
+get_template_part(  'parts/shared/html-footer' );
 
 ?>

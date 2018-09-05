@@ -9,6 +9,7 @@ button {
   background-color: transparent;
   color: $light-blue;
   outline-color: $light-blue;
+  cursor: pointer;
 
   @include respond-to(tablet) {
     font-size: 16px;

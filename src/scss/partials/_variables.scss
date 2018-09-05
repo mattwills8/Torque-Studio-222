@@ -22,11 +22,13 @@ $mainPadding: $mainPaddingTop $mainPaddingSides $mainPaddingBottom;
 $mainPaddingTopTablet: 35px;
 $mainPaddingBottomTablet: 40px;
 $mainPaddingSidesTablet: 75px;
-$mainPaddingTablet: $mainPaddingTopTablet $mainPaddingSidesTablet $mainPaddingBottomTablet;
+$mainPaddingTablet: $mainPaddingTopTablet $mainPaddingSidesTablet
+  $mainPaddingBottomTablet;
 
 $mainPaddingTopDesktop: 60px;
 $mainPaddingBottomDesktop: 70px;
 $mainPaddingSidesDesktop: 135px;
-$mainPaddingDesktop: $mainPaddingTopDesktop $mainPaddingSidesDesktop $mainPaddingBottomDesktop;
+$mainPaddingDesktop: $mainPaddingTopDesktop $mainPaddingSidesDesktop
+  $mainPaddingBottomDesktop;
 
 $mainMaxWidth: 1170px;
