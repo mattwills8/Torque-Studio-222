@@ -1,4 +1,4 @@
-#footer-cta-section {
+.s222-loop-post {
   position: relative;
   padding: 0px $mainPaddingSides $mainPaddingBottom;
 
@@ -6,13 +6,13 @@
     padding: 0;
   }
 
-  .footer-cta-section-image {
+  .loop-post-section-image {
     @include respond-to(desktop) {
       display: none;
     }
   }
 
-  .footer-cta-section-image-desktop {
+  .loop-post-section-image-desktop {
     @include respond-to-max(desktop) {
       display: none;
     }
@@ -25,7 +25,7 @@
     background-size: cover;
   }
 
-  .footer-cta-content-wrapper {
+  .loop-post-content-wrapper {
     padding: 0px 25px 20px;
     background-color: $smoke;
 
