@@ -16,10 +16,8 @@ if ( have_posts() ) while ( have_posts() ) : the_post();
 ?>
 
   <main>
-  		<?php get_template_part( 'parts/templates/titles/title', $post->post_type ); ?>
 
   		<?php get_template_part( 'parts/templates/content', $post->post_type ); ?>
-
 
   </main>
 

@@ -5,7 +5,7 @@ $tagline = get_field('tagline');
 
 ?>
 
-<div class="s222-title-area title-style-1" style="background-image: url(<?php echo $url; ?>);">
+<div class="s222-title-area title-style-2">
 
   <div class="title-content-wrapper">
 
@@ -17,9 +17,9 @@ $tagline = get_field('tagline');
 
     <?php } ?>
 
-    <div class="excerpt body-white"><?php echo the_excerpt(); ?></div>
+    <div class="excerpt"><?php echo the_excerpt(); ?></div>
 
-    <div class="studio-mark studio-mark-white"></div>
+    <div class="studio-mark studio-mark-grey"></div>
 
   </div>
 

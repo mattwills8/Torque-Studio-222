@@ -1,0 +1,126 @@
+.s222-title-area {
+  margin-top: -($headerHeight + 5px);
+  background-size: cover;
+
+  @include respond-to(tablet) {
+    margin-top: -($headerHeightTablet + 5px);
+  }
+
+  @include respond-to(desktop) {
+    margin-top: -($headerHeightDesktop + 5px);
+  }
+
+  .title-content-wrapper {
+    position: relative;
+    margin: 0 auto;
+    padding: 40px $mainPaddingSides;
+    padding-top: $headerHeight + 20px + 5px;
+    max-width: $mainMaxWidth + $mainPaddingSidesDesktop * 2;
+    box-sizing: border-box;
+
+    @include respond-to(tablet) {
+      padding: 110px $mainPaddingSidesTablet;
+      padding-top: $headerHeightTablet + 80px + 5px;
+    }
+
+    @include respond-to(desktop) {
+      padding: 250px $mainPaddingSidesDesktop;
+      padding-top: $headerHeightDesktop + 80px + 5px;
+    }
+  }
+
+  h1 {
+    margin: 0;
+    margin-bottom: 30px;
+
+    @include respond-to(tablet) {
+      margin-bottom: 50px;
+    }
+  }
+
+  h3 {
+    text-transform: uppercase;
+  }
+
+  .studio-mark {
+    @include respond-to-max(tablet) {
+      display: none;
+    }
+
+    position: absolute;
+    width: 219px;
+    height: 319px;
+
+    @include respond-to(desktop) {
+      width: 349px;
+      height: 510px;
+    }
+  }
+
+  &.title-style-1 {
+    .body-white {
+      @include respond-to(tablet) {
+        padding-right: 200px;
+      }
+
+      @include respond-to(desktop) {
+        padding-right: 50%;
+      }
+    }
+
+    .studio-mark {
+      right: 20px;
+      bottom: -40px;
+      background-image: url("../statics/images/222-mark.svg");
+
+      @include respond-to(desktop) {
+        right: $mainPaddingSidesDesktop;
+        bottom: -75px;
+        background-image: url("../statics/images/222-mark-large.svg");
+      }
+    }
+  }
+
+  &.title-style-2 {
+    .title-content-wrapper {
+      padding-bottom: 10px;
+
+      @include respond-to(tablet) {
+        padding-bottom: 30px;
+      }
+
+      @include respond-to(desktop) {
+        padding-bottom: 30px;
+      }
+    }
+
+    h1 {
+      @include respond-to(tablet) {
+        padding-right: 200px;
+      }
+
+      @include respond-to(desktop) {
+        padding-right: 300px;
+      }
+    }
+
+    .excerpt {
+      @include respond-to(desktop) {
+        max-width: 670px;
+      }
+    }
+
+    .studio-mark {
+      right: 20px;
+      top: 0px;
+      z-index: -1;
+      background-image: url("../statics/images/222-mark-grey.svg");
+
+      @include respond-to(desktop) {
+        right: $mainPaddingSidesDesktop;
+        top: -75px;
+        background-image: url("../statics/images/222-mark-large-grey.svg");
+      }
+    }
+  }
+}
