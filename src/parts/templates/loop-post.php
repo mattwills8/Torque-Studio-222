@@ -8,7 +8,7 @@ $cta_link = $s222_loop_post_cta_link ?? false;
 
 ?>
 
-<div id="<?php echo $id || ''; ?>" class="row s222-loop-post">
+<div id="<?php echo $id ?? ''; ?>" class="row s222-loop-post">
 
   <?php if ($image) { ?>
     <img class="col1 loop-post-section-image" src="<?php echo $image; ?>" />

@@ -1,9 +1,30 @@
 .s222-loop-post {
   position: relative;
-  padding: 0px $mainPaddingSides $mainPaddingBottom;
+  padding: 0;
+  padding-bottom: 20px;
+
+  &:last-child {
+    margin-bottom: -($mainPaddingBottom);
+  }
 
   @include respond-to(tablet) {
-    padding: 0;
+    margin-left: -($mainPaddingSidesTablet - $mainPaddingSides);
+    margin-right: -($mainPaddingSidesTablet - $mainPaddingSides);
+    padding-bottom: 30px;
+
+    &:last-child {
+      margin-bottom: -($mainPaddingBottomTablet);
+    }
+  }
+
+  @include respond-to(desktop) {
+    margin-left: -($mainPaddingSidesDesktop);
+    margin-right: -($mainPaddingSidesDesktop);
+    padding-bottom: 0px;
+
+    &:last-child {
+      margin-bottom: -($mainPaddingBottomDesktop);
+    }
   }
 
   .loop-post-section-image {
@@ -60,6 +81,24 @@
 
       @include respond-to(desktop) {
         margin-top: 80px;
+      }
+    }
+  }
+
+  // make every second one align the opposite way
+  &:nth-child(even) {
+    .loop-post-section-image-desktop {
+      left: 0;
+    }
+
+    .loop-post-content-wrapper {
+      @include respond-to(tablet) {
+        padding: 0px $mainPaddingSidesTablet $mainPaddingBottomTablet;
+      }
+
+      @include respond-to(desktop) {
+        padding: 50px $mainPaddingSidesDesktop
+          ($mainPaddingBottomDesktop + 10px) 70%;
       }
     }
   }

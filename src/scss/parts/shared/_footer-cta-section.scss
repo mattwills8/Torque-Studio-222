@@ -1,0 +1,8 @@
+#footer-cta-section {
+  margin: 0;
+  padding: 0px $mainPaddingSides $mainPaddingBottom;
+
+  @include respond-to(tablet) {
+    padding: 0;
+  }
+}
