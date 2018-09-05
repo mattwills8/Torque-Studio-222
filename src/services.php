@@ -1,6 +1,6 @@
 <?php
 /**
- * Template Name: Team
+ * Template Name: Services
  *
  * @package torque
  */
@@ -17,7 +17,7 @@ if ( have_posts() ) while ( have_posts() ) : the_post();
 
   <main>
 
-      <?php get_template_part( 'parts/templates/content-loop', 'team' ); ?>
+      <?php get_template_part( 'parts/templates/content-loop', 'services' ); ?>
 
   </main>
 
