@@ -109,6 +109,75 @@ class S222_ACF {
       			),
       			'return_format' => 'url',
       		),
+          array(
+      			'key' => 'field_5b8fdf7d91000',
+      			'label' => 'Add Secondary Footer CTA',
+      			'name' => 'secondary_footer_cta',
+      			'type' => 'true_false',
+      		),
+      		array(
+      			'key' => 'field_5b8fdf9d91001',
+      			'label' => 'Secondary CTA Title',
+      			'name' => 'secondary_footer_cta_title',
+      			'type' => 'text',
+      			'conditional_logic' => array(
+      				array(
+      					array(
+      						'field' => 'field_5b8fdf7d91000',
+      						'operator' => '==',
+      						'value' => '1',
+      					),
+      				),
+      			),
+      		),
+      		array(
+      			'key' => 'field_5b8fe00391002',
+      			'label' => 'Secondary CTA Content',
+      			'name' => 'secondary_footer_cta_content',
+      			'type' => 'textarea',
+      			'conditional_logic' => array(
+      				array(
+      					array(
+      						'field' => 'field_5b8fdf7d91000',
+      						'operator' => '==',
+      						'value' => '1',
+      					),
+      				),
+      			),
+      			'rows' => 5,
+      			'new_lines' => 'wpautop',
+      		),
+      		array(
+      			'key' => 'field_5b8fe03f91003',
+      			'label' => 'Secondary CTA Text',
+      			'name' => 'secondary_footer_cta_text',
+      			'type' => 'text',
+      			'conditional_logic' => array(
+      				array(
+      					array(
+      						'field' => 'field_5b8fdf7d91000',
+      						'operator' => '==',
+      						'value' => '1',
+      					),
+      				),
+      			),
+      		),
+      		array(
+      			'key' => 'field_5b8fe06091004',
+      			'label' => 'Secondary CTA Link',
+      			'name' => 'secondary_footer_cta_link',
+      			'type' => 'link',
+      			'conditional_logic' => array(
+      				array(
+      					array(
+      						'field' => 'field_5b8fdf7d91000',
+      						'operator' => '==',
+      						'value' => '1',
+      					),
+      				),
+      			),
+      			'return_format' => 'url',
+      		),
       	),
       	'location' => array(
       		array(
