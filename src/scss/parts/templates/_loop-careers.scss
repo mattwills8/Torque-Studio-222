@@ -1,0 +1,11 @@
+.loop-careers {
+  margin-bottom: 30px;
+
+  @include respond-to(tablet) {
+    margin-bottom: 50px;
+  }
+
+  p {
+    max-width: 780px;
+  }
+}
