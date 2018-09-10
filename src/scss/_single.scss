@@ -1,0 +1,11 @@
+body.single {
+  article {
+    margin-bottom: 50px;
+
+    @include respond-to(desktop) {
+      p {
+        max-width: 770px;
+      }
+    }
+  }
+}
