@@ -10,7 +10,8 @@ if (isset($_POST['tq-careers-form'])) {
       ! $_POST['tq-state']      ||
       ! $_POST['tq-zip']        ||
       ! $_POST['tq-phone']      ||
-      ! $_POST['tq-intro']
+      ! $_POST['tq-intro']      ||
+      ! isset($_FILES['tq-resume'])
     ) {
       throw new Exception('All form fields are required');
     }
@@ -20,7 +21,7 @@ if (isset($_POST['tq-careers-form'])) {
       ! wp_verify_nonce( $_POST['_wpnonce'], 'submit_careers_form' )
     ) {
       // couldnt verify nonce
-      throw new Exception('Couldnt validate form');
+      throw new Exception('Form failed validation');
     }
 
     if ( ! class_exists('Torque_Job_Application_CPT') ) {
@@ -28,19 +29,32 @@ if (isset($_POST['tq-careers-form'])) {
       throw new Exception('Couldnt find plugin class');
     }
 
+    // form is validated - can save the application post
+
     $application_id = Torque_Job_Application_CPT::save_application( $_POST['tq-name'], $_POST );
 
     if ( ! $application_id ) {
       throw new Exception();
-    } else {
-
-      // TODO: add email handling here and add form validation
-
-      $message = array(
-        'success' => false,
-        'message' => 'Thank you for your application. Your application ID is '.$application_id
-      );
     }
+
+    // lets upload the resume pdf
+
+    require_once( ABSPATH . 'wp-admin/includes/image.php' );
+  	require_once( ABSPATH . 'wp-admin/includes/file.php' );
+  	require_once( ABSPATH . 'wp-admin/includes/media.php' );
+    $media_id = media_handle_upload( 'tq-resume', $application_id );
+
+    if ( ! $media_id || is_wp_error($media_id) ) {
+      throw new Exception('Failed uploading resume');
+    }
+
+    // now send the email
+    
+
+    $message = array(
+      'success' => false,
+      'message' => 'Thank you for your application. Your application ID is '.$application_id
+    );
 
   } catch (Exception $e) {
 
