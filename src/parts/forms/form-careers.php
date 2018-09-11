@@ -4,13 +4,13 @@ if (isset($_POST['tq-careers-form'])) {
   // form was submitted
   try {
     if (
-      ! isset($_POST['tq-name'])       ||
-      ! isset($_POST['tq-email'])      ||
-      ! isset($_POST['tq-interested']) ||
-      ! isset($_POST['tq-state'])      ||
-      ! isset($_POST['tq-zip'])        ||
-      ! isset($_POST['tq-phone'])      ||
-      ! isset($_POST['tq-intro'])
+      ! $_POST['tq-name']       ||
+      ! $_POST['tq-email']      ||
+      ! $_POST['tq-interested'] ||
+      ! $_POST['tq-state']      ||
+      ! $_POST['tq-zip']        ||
+      ! $_POST['tq-phone']      ||
+      ! $_POST['tq-intro']
     ) {
       throw new Exception('All form fields are required');
     }
@@ -34,7 +34,7 @@ if (isset($_POST['tq-careers-form'])) {
       throw new Exception();
     } else {
 
-      // TODO: add email handling here
+      // TODO: add email handling here and add form validation
 
       $message = array(
         'success' => false,

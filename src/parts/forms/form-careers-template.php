@@ -22,7 +22,7 @@
     <input type="text" name="tq-name" id="tq-name" />
 
     <label for="tq-email">Email</label>
-    <input type="text" name="tq-email" id="tq-email" />
+    <input type="email" name="tq-email" id="tq-email" />
 
     <label for="tq-interested">Job You're Interested In</label>
     <input type="text" name="tq-interested" id="tq-interested" />
@@ -34,10 +34,13 @@
     <input type="text" name="tq-zip" id="tq-zip" />
 
     <label for="tq-phone">Phone</label>
-    <input type="text" name="tq-phone" id="tq-phone" />
+    <input type="tel" name="tq-phone" id="tq-phone" />
 
     <label for="tq-intro">Intro About Yourself</label>
     <textarea name="tq-intro" id="tq-intro" ></textarea>
+
+    <label for="tq-resume">Resume</label>
+    <input type="file" accept=".pdf" name="tq-resume" id="tq-resume" />
 
     <button type="submit">Submit</button>
   </form>
