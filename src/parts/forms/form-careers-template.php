@@ -18,29 +18,48 @@
     ?>
     <input type="hidden" name="tq-careers-form" />
 
-    <label for="tq-name">Name</label>
-    <input type="text" name="tq-name" id="tq-name" />
+    <div class="input-wrapper">
+      <label for="tq-name">Name</label>
+      <input type="text" name="tq-name" id="tq-name" />
+    </div>
 
-    <label for="tq-email">Email</label>
-    <input type="email" name="tq-email" id="tq-email" />
+    <div class="input-wrapper">
+      <label for="tq-email">Email</label>
+      <input type="email" name="tq-email" id="tq-email" />
+    </div>
 
-    <label for="tq-interested">Job You're Interested In</label>
-    <input type="text" name="tq-interested" id="tq-interested" />
+    <div class="input-wrapper">
+      <label for="tq-interested">Job You're Interested In</label>
+      <input type="text" name="tq-interested" id="tq-interested" />
+    </div>
 
-    <label for="tq-state">Current State</label>
-    <input type="text" name="tq-state" id="tq-state" />
+    <div class="input-wrapper">
+      <label for="tq-state">Current State</label>
+      <input type="text" name="tq-state" id="tq-state" />
+    </div>
 
-    <label for="tq-zip">Current Zip</label>
-    <input type="text" name="tq-zip" id="tq-zip" />
+    <div class="input-wrapper">
+      <label for="tq-zip">Current Zip</label>
+      <input type="text" name="tq-zip" id="tq-zip" />
+    </div>
 
-    <label for="tq-phone">Phone</label>
-    <input type="tel" name="tq-phone" id="tq-phone" />
+    <div class="input-wrapper">
+      <label for="tq-phone">Phone</label>
+      <input type="tel" name="tq-phone" id="tq-phone" />
+    </div>
 
-    <label for="tq-intro">Intro About Yourself</label>
-    <textarea name="tq-intro" id="tq-intro" ></textarea>
+    <div class="input-wrapper">
+      <label for="tq-intro">Intro About Yourself</label>
+      <textarea name="tq-intro" id="tq-intro" ></textarea>
+    </div>
 
-    <label for="tq-resume">Resume</label>
-    <input type="file" accept=".pdf" name="tq-resume" id="tq-resume" />
+    <div class="input-wrapper">
+      <div class="file-picker">
+        <label for="tq-resume" class="file-picker-label">Resume</label>
+        <label for="tq-resume" class="custom-file-picker">Click to Choose a File</label>
+        <input type="file" accept=".pdf" name="tq-resume" id="tq-resume" />
+      </div>
+    </div>
 
     <button type="submit">Submit</button>
   </form>

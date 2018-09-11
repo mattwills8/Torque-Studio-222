@@ -1,0 +1,95 @@
+$labelDesktopWidth: 200px;
+
+%desktopCentering {
+  @include respond-to(desktop) {
+    transform: translateX(-($labelDesktopWidth / 2));
+  }
+}
+
+#careers-form {
+  padding: 35px $mainPaddingSides 25px;
+  background-color: $smoke;
+
+  @include respond-to(tablet) {
+    padding: 55px $mainPaddingSidesTablet 35px;
+  }
+
+  @include respond-to(desktop) {
+    padding: 40px $mainPaddingSidesDesktop 45px;
+    text-align: center;
+  }
+
+  h3 {
+    margin-top: 0;
+
+    @include respond-to(desktop) {
+      text-align: center;
+      padding-right: 240px;
+    }
+  }
+
+  .input-wrapper {
+    @extend %desktopCentering;
+    margin-bottom: 10px;
+
+    label {
+      margin: 7px 0px;
+
+      &.custom-file-picker {
+        margin: 0;
+      }
+
+      @include respond-to(desktop) {
+        float: unset;
+        display: inline-block;
+        vertical-align: bottom;
+        margin-right: 30px;
+        width: $labelDesktopWidth;
+
+        &[for="tq-intro"] {
+          vertical-align: top;
+        }
+
+        &[for="tq-interested"] {
+          margin-bottom: 0;
+        }
+      }
+    }
+
+    input:not([type="file"]),
+    textarea {
+      @include respond-to(desktop) {
+        width: 470px;
+      }
+    }
+
+    .file-picker {
+      @include respond-to(desktop) {
+        height: 40px;
+        transform: translateX(-110px);
+        text-align: center;
+
+        label.file-picker-label {
+          text-align: right;
+          vertical-align: top;
+        }
+
+        label.custom-file-picker {
+          width: 250px;
+        }
+      }
+
+      button {
+        margin: 7px 0px;
+      }
+    }
+  }
+
+  button[type="submit"] {
+    margin-top: 30px;
+
+    @include respond-to(desktop) {
+      transform: translateX(-180px);
+    }
+  }
+}
