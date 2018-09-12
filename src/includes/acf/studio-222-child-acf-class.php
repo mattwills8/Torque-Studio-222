@@ -156,6 +156,11 @@ class S222_ACF {
       				'operator' => '==',
       				'value' => 'page',
       			),
+            array(
+      				'param' => 'post_template',
+      				'operator' => '!=',
+      				'value' => 'contact.php',
+      			),
       		),
       	),
       	'menu_order' => 0,
