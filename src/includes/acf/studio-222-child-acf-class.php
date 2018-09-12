@@ -204,6 +204,37 @@ class S222_ACF {
       	'active' => 1,
       ));
 
+      acf_add_local_field_group(array(
+	      'key' => 'group_5b98efefe6ed6',
+      	'title' => 'Contact Forms',
+      	'fields' => array(
+      		array(
+      			'key' => 'field_5b98eff4999f6',
+      			'label' => 'Contact Page Form Recipient',
+      			'name' => 'contact_page_form_recipient',
+      			'type' => 'email',
+      			'required' => 1,
+      		),
+      		array(
+      			'key' => 'field_5b98f103999f7',
+      			'label' => 'Careers Page Application Form Recipient',
+      			'name' => 'careers_page_application_form',
+      			'type' => 'email',
+      			'required' => 1,
+      		),
+      	),
+      	'location' => array(
+      		array(
+      			array(
+      				'param' => 'options_page',
+      				'operator' => '==',
+      				'value' => 'acf-options',
+      			),
+      		),
+      	),
+      	'active' => 1,
+      ));
+
     endif;
   }
 }
