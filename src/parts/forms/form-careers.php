@@ -49,7 +49,7 @@ if (isset($_POST['tq-careers-form'])) {
     }
 
     // now send the email
-    
+    include locate_template( 'parts/forms/form-careers-email.php', false, false );
 
     $message = array(
       'success' => false,
