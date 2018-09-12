@@ -42,6 +42,15 @@ if ( class_exists( 'S222_Widgets' ) ) {
 
 
 /**
+* Torque map config
+*/
+
+add_filter( 'torque_map_api_key', function($k) {
+  return 'AIzaSyDPF2QsUSJKHsmGoPcjIgRySglSZgD-asA';
+});
+
+
+/**
  * Admin settings
  */
 
