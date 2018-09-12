@@ -168,6 +168,50 @@ class S222_ACF {
       ));
 
       acf_add_local_field_group(array(
+      	'key' => 'group_5b990e39cbef7',
+      	'title' => 'Contact Page Footer',
+      	'fields' => array(
+      		array(
+      			'key' => 'field_5b990e49b2bec',
+      			'label' => 'Title',
+      			'name' => 'contact_footer_title',
+      			'type' => 'text',
+      		),
+      		array(
+      			'key' => 'field_5b990e66b2bed',
+      			'label' => 'Content',
+      			'name' => 'contact_footer_content',
+      			'type' => 'wysiwyg',
+      		),
+      		array(
+      			'key' => 'field_5b990e8eb2bee',
+      			'label' => 'CTA',
+      			'name' => 'contact_footer_cta',
+      			'type' => 'link',
+      			'return_format' => 'array',
+      		),
+          array(
+      			'key' => 'field_5b990f4d13043',
+      			'label' => 'Show Contact Form',
+      			'name' => 'show_contact_form',
+      			'type' => 'true_false',
+      			'default_value' => 1,
+      		),
+      	),
+      	'location' => array(
+      		array(
+      			array(
+      				'param' => 'post_template',
+      				'operator' => '==',
+      				'value' => 'contact.php',
+      			),
+      		),
+      	),
+      	'active' => 1,
+      ));
+
+
+      acf_add_local_field_group(array(
       	'key' => 'group_5b8961f058869',
       	'title' => 'Page Header',
       	'fields' => array(
