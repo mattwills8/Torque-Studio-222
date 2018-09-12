@@ -6,7 +6,7 @@ $labelDesktopWidth: 200px;
   }
 }
 
-#careers-form {
+.s222-form {
   padding: 35px $mainPaddingSides 25px;
   background-color: $smoke;
 
@@ -17,15 +17,6 @@ $labelDesktopWidth: 200px;
   @include respond-to(desktop) {
     padding: 40px $mainPaddingSidesDesktop 45px;
     text-align: center;
-  }
-
-  h3 {
-    margin-top: 0;
-
-    @include respond-to(desktop) {
-      text-align: center;
-      padding-right: 240px;
-    }
   }
 
   .input-wrapper {
@@ -90,6 +81,17 @@ $labelDesktopWidth: 200px;
 
     @include respond-to(desktop) {
       transform: translateX(-180px);
+    }
+  }
+}
+
+#careers-form {
+  h3 {
+    margin-top: 0;
+
+    @include respond-to(desktop) {
+      text-align: center;
+      padding-right: 240px;
     }
   }
 }

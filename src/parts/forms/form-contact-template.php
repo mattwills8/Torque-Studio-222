@@ -1,5 +1,4 @@
-<div id="careers-form" class="s222-form">
-  <h3>Apply Today</h3>
+<div id="contact-form" class="s222-form">
 
   <?php if (isset($message)) {
     $success_class = ! $message['success'] ? 'error' : '';
@@ -9,16 +8,16 @@
     </div>
   <?php } ?>
 
-  <form method="post" action="#careers-form" enctype="multipart/form-data">
+  <form method="post" action="#contact-form" >
 
-    <?php echo wp_nonce_field( 'submit_careers_form' ); ?>
+    <?php echo wp_nonce_field( 'submit_contact_form' ); ?>
 
     <?php
     // this hidden input is important for us to know
     // if the form has been submitted yet
     // so we can check that all fields are filled
     ?>
-    <input type="hidden" name="tq-careers-form" />
+    <input type="hidden" name="tq-contact-form" />
 
     <div class="input-wrapper">
       <label for="tq-name">Name</label>
@@ -31,17 +30,17 @@
     </div>
 
     <div class="input-wrapper">
-      <label for="tq-interested">Job You're Interested In</label>
-      <input type="text" name="tq-interested" id="tq-interested" />
+      <label for="tq-company">Company</label>
+      <input type="text" name="tq-company" id="tq-company" />
     </div>
 
     <div class="input-wrapper">
-      <label for="tq-state">Current State</label>
+      <label for="tq-state">State</label>
       <input type="text" name="tq-state" id="tq-state" />
     </div>
 
     <div class="input-wrapper">
-      <label for="tq-zip">Current Zip</label>
+      <label for="tq-zip">Zip</label>
       <input type="text" name="tq-zip" id="tq-zip" />
     </div>
 
@@ -51,19 +50,11 @@
     </div>
 
     <div class="input-wrapper">
-      <label for="tq-intro">Intro About Yourself</label>
-      <textarea name="tq-intro" id="tq-intro" ></textarea>
+      <label for="tq-message">Message</label>
+      <textarea name="tq-message" id="tq-message" ></textarea>
     </div>
 
-    <div class="input-wrapper">
-      <div class="file-picker">
-        <label for="tq-resume" class="file-picker-label">Resume</label>
-        <label for="tq-resume" class="custom-file-picker">Click to Choose a File</label>
-        <input type="file" accept=".pdf" name="tq-resume" id="tq-resume" />
-      </div>
-    </div>
-
-    <button type="submit">Submit</button>
+    <button type="submit">Send</button>
   </form>
 
 </div>
