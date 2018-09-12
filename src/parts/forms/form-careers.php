@@ -52,7 +52,7 @@ if (isset($_POST['tq-careers-form'])) {
     include locate_template( 'parts/forms/form-careers-email.php', false, false );
 
     $message = array(
-      'success' => false,
+      'success' => true,
       'message' => 'Thank you for your application. Your application ID is '.$application_id
     );
 

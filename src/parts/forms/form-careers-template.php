@@ -1,8 +1,10 @@
 <div id="careers-form">
   <h3>Apply Today</h3>
 
-  <?php if (isset($message)) { ?>
-    <div>
+  <?php if (isset($message)) {
+    $success_class = ! $message['success'] ? 'error' : '';
+    ?>
+    <div class="form-message <?php echo $success_class; ?>">
       <?php echo $message['message']; ?>
     </div>
   <?php } ?>
