@@ -16,18 +16,20 @@ button {
     line-height: 1.38;
     letter-spacing: 0.8px;
   }
+}
 
-  &.filter-button {
-    border: 1px solid $royal-blue;
-    padding: 10px 10px;
-    line-height: 1;
-    text-transform: uppercase;
-    color: $royal-blue;
+%filter-button {
+  margin: 0 10px 10px 0;
+  border: 1px solid $royal-blue;
+  padding: 10px 10px;
+  line-height: 1;
+  text-transform: uppercase;
+  color: $royal-blue;
+  outline: none;
 
-    &.active {
-      border-color: $orange;
-      color: $orange;
-    }
+  &.active {
+    border-color: $orange;
+    color: $orange;
   }
 }
 
