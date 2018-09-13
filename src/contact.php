@@ -11,6 +11,8 @@ get_template_part( 'parts/shared/html-header' );
 
 if ( have_posts() ) while ( have_posts() ) : the_post();
 
+  $show_form = get_field('show_contact_form');
+
   get_template_part( 'parts/shared/header' );
 
 ?>
@@ -21,7 +23,10 @@ if ( have_posts() ) while ( have_posts() ) : the_post();
 
   </main>
 
-  <?php get_template_part( 'parts/forms/form', 'contact' );
+  <?php
+  if ($show_form) {
+    get_template_part( 'parts/forms/form', 'contact' );
+  }
 
   get_template_part(  'parts/shared/footer' );
 
