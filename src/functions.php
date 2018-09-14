@@ -46,7 +46,7 @@ if ( class_exists( 'S222_Widgets' ) ) {
 */
 
 add_filter( 'torque_map_api_key', function($k) {
-  return 'AIzaSyDPF2QsUSJKHsmGoPcjIgRySglSZgD-asA';
+  return 'AIzaSyARHV9NvPpNOXUAmjWJPhXcgWatWX32SNs';
 });
 
 
