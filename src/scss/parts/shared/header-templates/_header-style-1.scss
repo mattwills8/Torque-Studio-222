@@ -60,6 +60,7 @@ header#header-style-1 {
         .torque-menu-item {
           @extend %nav-bar-link;
           padding: 0 17px;
+          text-transform: uppercase;
         }
       }
 
@@ -86,6 +87,7 @@ header#header-style-1 {
     .torque-menu-item {
       @extend %nav-menu-link;
       padding: 15px 0px;
+      text-transform: uppercase;
 
       @include respond-to(tablet) {
         padding: 20px 0px;
