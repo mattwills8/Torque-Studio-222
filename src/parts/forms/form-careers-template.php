@@ -63,6 +63,11 @@
       </div>
     </div>
 
+    <div class="input-wrapper" >
+      <label></label>
+      <?php echo do_shortcode('[torque_recaptcha]'); ?>
+    </div>
+
     <button type="submit">Submit</button>
   </form>
 
