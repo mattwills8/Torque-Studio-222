@@ -5,3 +5,4 @@ if (!global._babelPolyfill) {
 }
 
 import "./forms/form_careers";
+import "./disableRightClick";
