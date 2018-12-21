@@ -5,6 +5,7 @@ $image = $s222_loop_post_image ?? false;
 $title = $s222_loop_post_title ?? false;
 $content = $s222_loop_post_content ?? false;
 $cta_link = $s222_loop_post_cta_link ?? false;
+$location = $s222_loop_post_project_location ?? false;
 
 ?>
 
@@ -22,7 +23,12 @@ $cta_link = $s222_loop_post_cta_link ?? false;
     <?php } ?>
 
     <?php if ($content) { ?>
-      <div class="loop-post-content"><?php echo $content; ?></div>
+      <div class="loop-post-content">
+        <?php if ($location) { ?>
+          <p class="loop-post-project-location"><?php echo $location; ?></p>
+        <?php } ?>
+        <?php echo $content; ?>
+      </div>
     <?php } ?>
 
     <?php if ($cta_link) { ?>

@@ -20,6 +20,7 @@ if ( $query->have_posts() ) {
       'title'     => 'Learn More',
       'target'    => '_blank'
     );
+    $s222_loop_post_project_location = get_field('location');
 
     include locate_template( 'parts/templates/loop-post.php', false, false );
   }

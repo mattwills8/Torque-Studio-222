@@ -16,6 +16,8 @@ foreach ($cats as $cat) {
   }
 }
 
+$location = get_field('location');
+
 
 get_template_part( 'parts/shared/html-header' );
 
@@ -28,6 +30,10 @@ if ( have_posts() ) while ( have_posts() ) : the_post();
 ?>
 
   <main>
+
+      <?php if ($location) { ?>
+        <p class="loop-post-project-location"><?php echo $location; ?></p>
+      <?php } ?>
 
   		<?php get_template_part( 'parts/templates/content', 'single' ); ?>
 

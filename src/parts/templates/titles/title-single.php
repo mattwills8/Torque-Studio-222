@@ -13,6 +13,5 @@ $image_src = get_the_post_thumbnail_url();
   <div class="title-single-title-wrapper">
     <h1><?php echo the_title(); ?></h1>
   </div>
-  
 
 </div>

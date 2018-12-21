@@ -7,7 +7,7 @@ class S222_ACF {
     add_action('acf/init', array( $this, 'acf_init' ) );
 
     // hide acf in admin - client doesnt need to see this
-    add_filter('acf/settings/show_admin', '__return_false');
+    // add_filter('acf/settings/show_admin', '__return_false');
   }
 
 
