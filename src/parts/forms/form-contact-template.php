@@ -54,6 +54,11 @@
       <textarea name="tq-message" id="tq-message" ></textarea>
     </div>
 
+    <div class="input-wrapper" >
+      <label></label>
+      <?php echo do_shortcode('[torque_recaptcha]'); ?>
+    </div>
+
     <button type="submit">Send</button>
   </form>
 

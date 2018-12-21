@@ -48,10 +48,15 @@ $labelDesktopWidth: 200px;
     }
 
     input:not([type="file"]),
-    textarea {
+    textarea,
+    .g-recaptcha {
       @include respond-to(desktop) {
         width: 470px;
       }
+    }
+
+    .g-recaptcha {
+      display: inline-block;
     }
 
     .file-picker {
