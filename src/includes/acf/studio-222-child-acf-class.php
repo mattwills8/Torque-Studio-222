@@ -58,7 +58,7 @@ class S222_ACF {
       		),
       	),
       	'menu_order' => 0,
-      	'position' => 'acf_after_title',
+      	'position' => 'normal',
       	'style' => 'default',
       	'label_placement' => 'top',
       	'instruction_placement' => 'label',
